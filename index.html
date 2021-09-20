@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Average Calculator</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style3.css">
+</head>
+<body>
+
+    <div class="mark">
+    <br>
+        <b>Enter sem 1 obtained marks</b> <input type="number" id="txtnum1"> <b>Enter sem 1 maximum marks</b> <input type="number" id="txtnum7" value="800"> <br><br> 
+        <b>Enter sem 2 obtained marks</b> <input type="number" id="txtnum2"> <b>Enter sem 2 maximum marks</b> <input type="number" id="txtnum8" value="800"> <br><br>
+        <b>Enter sem 3 obtained marks</b> <input type="number" id="txtnum3"> <b>Enter sem 3 maximum marks</b> <input type="number" id="txtnum9" value="700"> <br><br>
+        <b>Enter sem 4 obtained marks</b> <input type="number" id="txtnum4"> <b>Enter sem 4 maximum marks</b> <input type="number" id="txtnum10" value="700"> <br><br>
+        <b>Enter sem 5 obtained marks</b> <input type="number" id="txtnum5"> <b>Enter sem 5 maximum marks</b> <input type="number" id="txtnum11" value="700"> <br><br>
+        <b>Enter sem 6 obtained marks</b> <input type="number" id="txtnum6"> <b>Enter sem 6 maximum marks</b> <input type="number" id="txtnum12" value="700"> <br> <br>
+    </div>
+
+    <div class="calculation">
+        <input type="button" onclick="Calculate()" value="calculate" style="width: 150px; height: 38px; font-family: cursive;"> <br><br>
+
+    </div>
+    <div class="average">
+
+        <h1>Average</h1>  
+          The average is: 
+          <p id="avg">  </p>
+
+          <h1>Total Obtained Marks</h1>
+          <p id="obtaine"></p>
+
+        </div>
+
+        
+
+        <script>
+     
+
+            function Calculate() {
+                           
+                var a = Number(document.getElementById("txtnum1").value);
+                var b = Number(document.getElementById("txtnum2").value);
+                var c = Number(document.getElementById("txtnum3").value);
+                var d = Number(document.getElementById("txtnum4").value);
+                var e = Number(document.getElementById("txtnum5").value);
+                var f = Number(document.getElementById("txtnum6").value);
+                var g = Number(document.getElementById("txtnum7").value);
+                var h = Number(document.getElementById("txtnum8").value);
+                var i = Number(document.getElementById("txtnum9").value);
+                var j = Number(document.getElementById("txtnum10").value);
+                var k = Number(document.getElementById("txtnum11").value);
+                var l = Number(document.getElementById("txtnum12").value);
+
+                if (a>g || b>h || c>i || d>j || e>k || f>l){
+
+                    window.alert("Enter Your Marks Correctly")
+                }        
+    
+                    else {
+                        var obtained = (a+b+c+d+e+f);
+                        var max = (g+h+i+j+k+l);
+                        var avg =  obtained/max * 100;
+                        document.getElementById("avg").innerHTML = avg;
+                        window.alert("The Average is "+avg +"%");
+                        document.getElementById("obtaine").innerHTML = obtained
+                    }
+    
+            } 
+        </script>
+    
+
+        
+    
+</body>
+</html>
